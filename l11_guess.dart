@@ -49,12 +49,26 @@ void main() {
   // ask the user to guess a number between 1 and 9
   stdout.write("Please guess a number between 1 and 9: ");
   input = stdin.readLineSync();
+  RegExp regex = RegExp(r'[a-zA-Z\s]+');
 
   // try to parse the user input as an integer
   var guess = int.tryParse(input!);
 
   if (guess == null || guess < 1 || guess > 9) {
     print("Invalid guess. Please enter a number between 1 and 9.");
+    stdout.write("Please guess a number between 1 and 9: ");
+    input = stdin.readLineSync();
+
+    // try to parse the user input as an integer
+    var guess = int.tryParse(input!);
+  }
+  if (regex.hasMatch(input)) {
+    print("Invalid guess. Please enter a number between 1 and 9.");
+    stdout.write("Please guess a number between 1 and 9: ");
+    input = stdin.readLineSync();
+
+    // try to parse the user input as an integer
+    var guess = int.tryParse(input!);
   }
 
   print(
