@@ -40,8 +40,10 @@ void main() {
   var bet = int.parse(input!);
 
   // check if the bet is greater than the user's balance
-  if (bet > user.balance) {
+  if (bet > user.balance || bet == 0) {
     print("You don't have enough money to place that bet.");
+    stdout.write(" Please enter your bet amount: ");
+    input = stdin.readLineSync();
   }
 
   // ask the user to guess a number between 1 and 9
