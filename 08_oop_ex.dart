@@ -11,14 +11,18 @@ void main() {}
 /// final String a= "my name is jack";
 /// ```
 class Guess {
-  final String name;
+  // final String name;
+  final String name = "";
   //user money
-  final int balance;
-  final int earn;
-  final bool play;
+  // final int balance;
+  final int balance = 0;
+  // final int earn;
+  final int earn = 0;
+  // final bool play;
+  final bool play = false;
 //random number need
 //guess number need
 
 //this is guess method
-  final int earn;
+  // final int earn = 0;
 }

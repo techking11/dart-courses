@@ -7,6 +7,7 @@ class Phone {
   Phone({required String this.name, required int this.price, int? storage}) {
     _ram = 500000 - price;
   }
+  
   void storge() {
     print('$name has ${storage ?? 128}gb');
   }
